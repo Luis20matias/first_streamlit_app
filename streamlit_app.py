@@ -25,5 +25,6 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 # display the table on the page
 streamlit.dataframe(fruits_to_show)
 
+streamlit.header('Frutyvice Fruit Advice!')
 fruitvyce_response = requests.get('https://fruityvice.com/api/fruit/watermelon')
-streamlit.text(fruitvyce_response)
+streamlit.text(fruitvyce_response.json())
